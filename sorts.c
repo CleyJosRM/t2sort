@@ -1,3 +1,5 @@
+#include <string.h>
+
 void swap(int* a, int* b) {
     int temp = *a;
     *a = *b;
@@ -145,5 +147,89 @@ void heap_sort(int* array, int size){
         array[size - 1 - i] = array[0];
         array[0] = aux;
         heapify(array, 0, size - 1 - i);
+    }
+}
+
+/*---------------merge--------------------*/
+void merge(int v[], int esq, int meio, int dir){
+    int n1 = meio - esq + 1;
+    int n2 = dir - meio;
+
+    int auxEsq[n1];
+    int auxDir[n2];
+
+    //Copia os valores para os vetores auxiliares
+    memcpy(auxEsq, &v[esq], n1 * sizeof(int));
+    memcpy(auxDir, &v[meio + 1], n2 * sizeof(int));
+
+    int i = 0, j = 0, k = esq;
+
+    //Entre os vetores, ordena selecionando o maior
+    while(i < n1 && j < n2){
+        if(auxEsq[i] <= auxDir[j]){
+            v[k] = auxEsq[i];
+            i++;
+        }
+        else{
+            v[k] = auxDir[j];
+            j++;
+        }
+        k++;
+    }
+
+    //Garantimos que percorremos todos os indices
+    while(i < n1){
+        v[k] = auxEsq[i];
+        i++;
+        k++;
+    }
+    while(j < n2){
+        v[k] = auxDir[j];
+        j++;
+        k++;
+    }
+}
+
+void mergeSort(int v[], int inicio, int fim){
+    int meio;
+    if(inicio < fim){
+        meio = (fim + inicio)/2;
+        mergeSort(v, inicio, meio);
+        mergeSort(v, meio + 1, fim);
+        merge(v, inicio, meio, fim);
+    }
+}
+
+/*---------------Counting--------------------*/
+void countingSort(int v[], int size){
+    //Procura o maior
+    int maior = v[0];
+    for(int i = 0; i < size; i++){
+        if(v[i] > maior){
+            maior = v[i];
+        }
+    }
+    int aux[maior+1] = {}; //inicia com 0
+
+    //Conta as aparições dos elementos
+    for(int i = 0; i < size; i++){
+        int index = v[i];
+        //Se já existir um valor no indice
+        if(aux[index]){
+            aux[index] += 1;
+        }
+        else{
+            aux[index] = 1;
+        }
+    }
+
+    //Ordena o vetor
+    int j = 0;
+    for(int i = 0; i < maior+1; i++){
+        while(aux[i] > 0){
+            v[j] = i;
+            j++;
+            aux[i]--;
+        }
     }
 }
