@@ -7,35 +7,35 @@ void swap(int* a, int* b) {
 }
 
 /*----------------bubble-------------------*/
-void bubble_sort(int* array, int n){
-    int swapped = 1; // 1
-    for(int i = 0; i < n && swapped; i++){ // 2 + n + 1 + 2 + n + 1
-        swapped = 0; // 1
-        for(int j = 0; j < n - i - 1; j++){ // 2 + 
+void bubble_sort(int* array, int n, int* counts){
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n - i - 1; j++){
+            counts[0]++;
             if(array[j] > array[j + 1]){
                 swap(&array[j], &array[j + 1]);
-                swapped = 1;
+                counts[1]++;
             }
         }
     }
 }
 
 /*------------selection----------------*/
-void selection_sort(int* array, int n){
-
+void selection_sort(int* array, int n, int* counts){
     for(int i = 0; i < n - 1; i++){
         int min = i;
         for(int j = i + 1; j < n; j++){
+            counts[0]++;
             if(array[j] < array[min]){
                 min = j;
             }
         }
         swap(&array[min], &array[i]);
+        counts[1]++;
     }
 }
 
 /*-------------shell sort--------------*/
-void shellSort(int* arr, int n){
+void shellSort(int* arr, int n, int* counts){
     
     int seqSedgewick[] = {
     16764929, 9427969, 4188161, 2354689, 1045505, 
@@ -54,59 +54,74 @@ void shellSort(int* arr, int n){
             int temp = arr[i];
             int j;
             
-            for(j = i; j >= gap && arr[j - gap] > temp; j -= gap){
-                arr[j] = arr[j - gap];
-            }
+            for(j = i; j >= gap; j -= gap){
+                counts[0]++;
+
+                if(arr[j - gap] > temp){
+                    arr[j] = arr[j - gap];
+                    counts[1]++;
+                }else{
+                    break;
+                }
+            }            
             arr[j] = temp;
+            counts[1]++;
         }
     }
 }
 
 /*---------------quick-------------------*/
-int pivotMediana(int* array, int left, int right){
+int pivotMediana(int* array, int left, int right, int* counts){
 
     int mid = left + (right - left) / 2;
     if(array[left] > array[mid]){
         swap(&array[left], &array[mid]);
+        counts[1]++;
     }
     if(array[left] > array[right]){
         swap(&array[left], &array[right]);
+        counts[1]++;
     }
     if(array[mid] > array[right]){
         swap(&array[mid], &array[right]);
+        counts[1]++;
     }
 
     swap(&array[mid], &array[right]);
+    counts[0] += 3;
+    counts[1]++;
 
     return array[right];
 }
 
-int partition(int* array, int left, int right){
+int partition(int* array, int left, int right, int* counts){
 
-    int pivot = pivotMediana(array, left, right);
+    int pivot = pivotMediana(array, left, right, counts);
     int i = left -1;
     int j = left;
     for(;j < right; j++){
+        counts[0]++;
         if(array[j] < pivot){
             i++;
             swap(&array[i], &array[j]);
+            counts[1]++;
         }
     }
     swap(&array[i + 1], &array[right]);
-
+    counts[1]++;
     return i + 1;
 }
 
-void quick_sort(int* array, int left, int right){
+void quick_sort(int* array, int left, int right, int* counts){
     if(left < right){
-        int pivot = partition(array, left, right);
-        quick_sort(array, left, pivot - 1);
-        quick_sort(array, pivot + 1, right);
+        int pivot = partition(array, left, right, counts);
+        quick_sort(array, left, pivot - 1, counts);
+        quick_sort(array, pivot + 1, right, counts);
     }
 }
 
 /*---------------heap--------------------*/
-void heapify(int* array, int k, int size){
+void heapify(int* array, int k, int size, int* counts){
     int l = 2*k + 1;
     int r = 2*k + 2;
 
@@ -118,26 +133,29 @@ void heapify(int* array, int k, int size){
     if(r < size && array[r] > array[max]){
         max = r;
     }
+    counts[0] += 2;
     if(max != k){
         swap(&array[k], &array[max]);
-        heapify(array, max, size);
+        counts[1]++;
+        heapify(array, max, size, counts);
     }
 }
 
-void build_max_heap(int* array, int size){
+void build_max_heap(int* array, int size, int* counts){
     int k = size/2 - 1;
 
     for(int i = k; i >= 0; i--){
-        heapify(array, i, size);
+        heapify(array, i, size, counts);
     }
 }
 
-void heap_sort(int* array, int size){
-    build_max_heap(array, size);
+void heap_sort(int* array, int size, int* counts){
+    build_max_heap(array, size, counts);
 
     for(int i = 0; i < size; i++){
         swap(&array[0], &array[size - 1 - i]);
-        heapify(array, 0, size - 1 - i);
+        counts[1]++;
+        heapify(array, 0, size - 1 - i, counts);
     }
 }
 
@@ -223,4 +241,37 @@ void countingSort(int v[], int size){
             aux[i]--;
         }
     }
+}
+
+int main(){
+
+    int n, sel;
+
+    scanf("%d", &n);
+    scanf("%d", &sel);
+
+    int* arr = (int*)malloc(n * sizeof(int));
+
+    switch(sel){
+        case 1: 
+        for(int i = 0; i < n; i++){
+            arr[i] = n - i;
+        }
+        break;
+
+        case 2:
+        for(int i = 0; i < n; i++){
+            arr[i] = i + 1;
+        }
+        break;
+
+        case 3:
+        int seed = 12345; //Não altere esse valor.
+        for(int i = 0; i < n; i++){
+            arr[i] = get_random(&seed, n);
+        }
+        break;
+    }
+
+    return 0;
 }
