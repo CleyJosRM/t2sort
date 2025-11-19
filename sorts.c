@@ -13,9 +13,7 @@ void bubble_sort(int* array, int n){
         swapped = 0; // 1
         for(int j = 0; j < n - i - 1; j++){ // 2 + 
             if(array[j] > array[j + 1]){
-                int aux = array[j + 1];
-                array[j + 1] = array[j];
-                array[j] = aux;
+                swap(&array[j], &array[j + 1]);
                 swapped = 1;
             }
         }
@@ -32,9 +30,7 @@ void selection_sort(int* array, int n){
                 min = j;
             }
         }
-        int aux = array[min];
-        array[min] = array[i];
-        array[i] = aux;
+        swap(&array[min], &array[i]);
     }
 }
 
@@ -123,10 +119,7 @@ void heapify(int* array, int k, int size){
         max = r;
     }
     if(max != k){
-        int aux = array[k];
-        array[k] = array[max];
-        array[max] = aux;
-
+        swap(&array[k], &array[max]);
         heapify(array, max, size);
     }
 }
@@ -143,9 +136,7 @@ void heap_sort(int* array, int size){
     build_max_heap(array, size);
 
     for(int i = 0; i < size; i++){
-        int aux = array[size - 1 - i];
-        array[size - 1 - i] = array[0];
-        array[0] = aux;
+        swap(&array[0], &array[size - 1 - i]);
         heapify(array, 0, size - 1 - i);
     }
 }
