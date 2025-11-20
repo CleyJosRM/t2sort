@@ -75,11 +75,11 @@ int main(){
             break;
 
         case 7:
-            mergeSort(arr, 0, n - 1);
+            mergeSort(arr, 0, n - 1, counts);
             break;
 
         case 8:
-            countingSort(arr, n);
+            countingSort(arr, n, counts);
             break;
 
         case 9:

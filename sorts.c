@@ -182,7 +182,7 @@ void heap_sort(int* array, int size, int* counts){
 }
 
 /*---------------merge--------------------*/
-void merge(int v[], int esq, int meio, int dir){
+void merge(int v[], int esq, int meio, int dir, int *counts){
     int n1 = meio - esq + 1;
     int n2 = dir - meio;
 
@@ -205,6 +205,7 @@ void merge(int v[], int esq, int meio, int dir){
             v[k] = auxDir[j];
             j++;
         }
+        counts[0] += 1;
         k++;
     }
 
@@ -221,27 +222,32 @@ void merge(int v[], int esq, int meio, int dir){
     }
 }
 
-void mergeSort(int v[], int inicio, int fim){
+void mergeSort(int v[], int inicio, int fim, int* counts){
     int meio;
     if(inicio < fim){
         meio = (fim + inicio)/2;
-        mergeSort(v, inicio, meio);
-        mergeSort(v, meio + 1, fim);
-        merge(v, inicio, meio, fim);
+        mergeSort(v, inicio, meio, counts);
+        mergeSort(v, meio + 1, fim, counts);
+        merge(v, inicio, meio, fim, counts);
     }
 }
 
+
 /*---------------Counting--------------------*/
-void countingSort(int v[], int size){
-    //Procura o maior
+int Maior(int v[], int size, int *counts){
     int maior = v[0];
     for(int i = 0; i < size; i++){
         if(v[i] > maior){
             maior = v[i];
         }
+        counts[0] += 1;
     }
+    return maior;
+}
+void countingSort(int v[], int size, int *counts){ 
+    int maior = Maior(v, size, counts);
     int aux[maior + 1];
-    memset(aux, 0, sizeof(aux));
+    memset(aux, 0, sizeof(aux)); //Inicia com 0
 
     //Conta as aparições dos elementos
     for(int i = 0; i < size; i++){
