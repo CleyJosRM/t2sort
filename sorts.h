@@ -4,13 +4,13 @@
     #include <string.h>
     #include <stdio.h>
 
-    void bubble_sort(int* array, int n, int* counts);
-    void selection_sort(int* array, int n, int* counts);
-    void insertion_sort(int* array, int n, int* counts);
-    void shellSort(int* arr, int n, int* counts);
-    void quick_sort(int* array, int left, int right, int* counts);
-    void heap_sort(int* array, int size, int* counts);
-    void mergeSort(int v[], int inicio, int fim, int *counts);
-    void ContagemMenores(int v[], int size, int *counts);
-    void radix_sort(int v[], int n, int *counts);
+    void bubble_sort(int* array, int n, long long int* counts);
+    void selection_sort(int* array, int n, long long int* counts);
+    void insertion_sort(int* array, int n, long long int* counts);
+    void shellSort(int* arr, int n, long long int* counts);
+    void quick_sort(int* array, int left, int right, long long int* counts);
+    void heap_sort(int* array, int size, long long int* counts);
+    void mergeSort(int v[], int inicio, int fim, long long int *counts);
+    void ContagemMenores(int v[], int size, long long int *counts);
+    void radix_sort(int v[], int n, long long int *counts);
 #endif
