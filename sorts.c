@@ -182,7 +182,7 @@ void heap_sort(int* array, int size, long long int* counts){
 }
 
 /*---------------merge sort--------------------*/
-void merge(int v[], int esq, int meio, int dir, int *counts){
+void merge(int v[], int esq, int meio, int dir, long long int *counts){
     int n1 = meio - esq + 1;
     int n2 = dir - meio;
 
@@ -222,7 +222,7 @@ void merge(int v[], int esq, int meio, int dir, int *counts){
     }
 }
 
-void mergeSort(int v[], int inicio, int fim, int* counts){
+void mergeSort(int v[], int inicio, int fim, long long int* counts){
     int meio;
     if(inicio < fim){
         meio = (fim + inicio)/2;
@@ -233,7 +233,7 @@ void mergeSort(int v[], int inicio, int fim, int* counts){
 }
 
 /*---------------Counting sort--------------------*/
-int Maior(int v[], int size, int *counts){
+int Maior(int v[], int size, long long int *counts){
     int maior = v[0];
     for(int i = 0; i < size; i++){
         if(v[i] > maior){
@@ -243,7 +243,7 @@ int Maior(int v[], int size, int *counts){
     }
     return maior;
 }
-void countingSort(int v[], int size, int *counts){ 
+void countingSort(int v[], int size, long long int *counts){ 
     int maior = Maior(v, size, counts);
     int aux[maior + 1];
     memset(aux, 0, sizeof(aux)); //Inicia com 0
@@ -301,7 +301,7 @@ void Bucket_excluir(Bucket *buckets){
     free(buckets);
 }
 
-void radix_sort(int v[], int n, int *counts){
+void radix_sort(int v[], int n, long long int *counts){
     int k = Maior(v, n, counts); //pega o maior elemento
 
     Bucket *buckets = Bucket_criar(n);
