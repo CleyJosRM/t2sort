@@ -271,7 +271,6 @@ void ContagemMenores(int v[], int size, long long int *counts){
     }
     for(int i = 0; i < size; i++){
         v[i] = out[i];
-        printf("%d,", v[i]);
     }
     free(aux);
     free(out);
@@ -327,10 +326,12 @@ void radix_sort(int v[], int n, long long int *counts){
             //Percorre os buckets e insere no vetor
             for(int j = 0; j < buckets[i].tamanho; j++){
                 v[index] = buckets[i].lista[j];
+                
                 index++;
             }
             buckets[i].tamanho = 0;
         }
+        
     }
 
     Bucket_excluir(buckets); //Libera os buckets auxiliares
