@@ -15,7 +15,7 @@ int main(){
     printf("Selecione o tipo de vetor:\n 1. Vetor ordenado \n 2. Vetor ordenado inverso\n 3. Vetor aleatório\n");
     scanf("%d", &sel);
 
-    printf("Selecione o algoritmo:\n 1. Bubble Sort\n 2. Selection Sort\n 3. Shell Sort\n 4. Quick Sort\n 5. Heap Sort\n");
+    printf("Selecione o algoritmo:\n 1. Bubble Sort\n 2. Selection Sort\n 3. Insertion Sort\n 4. Shell Sort\n 5. Quick Sort\n 6. Heap Sort\n 7. Merge sort\n 8. Counting Sort\n 9. Radix sort\n");
     scanf("%d", &sort);
 
     int* arr = (int*)malloc(n * sizeof(int));
@@ -26,8 +26,6 @@ int main(){
 
     counts[0] = 0; // Comparações
     counts[1] = 0; // Trocas
-
-    printf("log1");
 
     switch(sel){
         case 1:
@@ -50,8 +48,6 @@ int main(){
         break;
     }
 
-    printf("log2");
-
     inicio = clock(); 
     switch(sort){
         case 1:
@@ -63,21 +59,36 @@ int main(){
             break;
         
         case 3:
-            shellSort(arr, n, counts);
+            insertion_sort(arr, n, counts);
             break;
 
         case 4:
-            quick_sort(arr, 0, n, counts);
+            shellSort(arr, n, counts);
             break;
 
         case 5:
+            quick_sort(arr, 0, n - 1, counts);
+            break;
+
+        case 6:
             heap_sort(arr, n, counts);
+            break;
+
+        case 7:
+            mergeSort(arr, 0, n - 1);
+            break;
+
+        case 8:
+            countingSort(arr, n);
+            break;
+
+        case 9:
+            //raidix_sort(arr, n, counts);
             break;
             
         default:
             printf("Opcao invalida.\n");
     }
-    printf("log3");
 
     fim = clock();
     tempo_cpu = ((double) (fim - inicio)) / CLOCKS_PER_SEC;
