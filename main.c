@@ -101,10 +101,7 @@ int main(){
 
     fim = clock();
     tempo_cpu = ((double) (fim - inicio)) / CLOCKS_PER_SEC;
-    //Verificação de vetor ordenado
-    /*for(int i =0; i< n; i++){
-        printf("%d,", arr[i]);
-    }*/
+
     printf("\n---------------- RESULTADOS ----------------\n");
     printf("Tempo de execucao: %f segundos\n", tempo_cpu);
     printf("Comparacoes:       %lld\n", counts[0]);
