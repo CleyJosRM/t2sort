@@ -30,7 +30,7 @@ int main(){
     int* arr = (int*)malloc(n * sizeof(int));
     if(arr == NULL) return 1;
     
-    int* counts = (int*)malloc(2 * sizeof(int));
+    long long int* counts = (int*)malloc(2 * sizeof(int));
     if(counts == NULL) {free(arr); return 1;}
 
     counts[0] = 0; // Comparações
@@ -104,8 +104,8 @@ int main(){
 
     printf("\n---------------- RESULTADOS ----------------\n");
     printf("Tempo de execucao: %f segundos\n", tempo_cpu);
-    printf("Comparacoes:       %d\n", counts[0]);
-    printf("Trocas/Movim.:     %d\n", counts[1]);
+    printf("Comparacoes:       %lld\n", counts[0]);
+    printf("Trocas/Movim.:     %lld\n", counts[1]);
     printf("--------------------------------------------\n");
 
     free(arr);
