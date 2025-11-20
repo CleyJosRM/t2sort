@@ -1,8 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <time.h>
 #include "sorts.h"
-#include "util.h"
+
+int get_random(int *state, int max) {
+    uint32_t x = (uint32_t) *state;
+    x ^= x << 13;
+    x ^= x >> 17;
+    x ^= x << 5;
+    *state = x;
+    return (int)((x % max) + 1);
+}
 
 int main(){  
     int n, sel, sort;
