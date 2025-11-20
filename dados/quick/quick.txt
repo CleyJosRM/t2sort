@@ -1,0 +1,68 @@
+Resultados ordenado
+
+
+---------------- RESULTADOS ----------------
+Tamanho do vetor:  100
+Tempo de execucao: 0.000010 segundos
+Comparacoes:       669
+Trocas/Movim.:     345
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tamanho do vetor:  1000
+Tempo de execucao: 0.000074 segundos
+Comparacoes:       9520
+Trocas/Movim.:     4960
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tamanho do vetor:  10000
+Tempo de execucao: 0.000545 segundos
+Comparacoes:       131343
+Trocas/Movim.:     66421
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tamanho do vetor:  100000
+Tempo de execucao: 0.005643 segundos
+Comparacoes:       1665551
+Trocas/Movim.:     846100
+--------------------------------------------
+
+resultados inverso
+
+
+---------------- RESULTADOS ----------------
+Tamanho do vetor:  100
+Tempo de execucao: 0.000014 segundos
+Comparacoes:       868
+Trocas/Movim.:     556
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tamanho do vetor:  1000
+Tempo de execucao: 0.000135 segundos
+Comparacoes:       15849
+Trocas/Movim.:     9583
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tamanho do vetor:  10000
+Tempo de execucao: 0.000960 segundos
+Comparacoes:       234923
+Trocas/Movim.:     139308
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tamanho do vetor:  100000
+Tempo de execucao: 0.010976 segundos
+Comparacoes:       3107283
+Trocas/Movim.:     1814032
+--------------------------------------------
+

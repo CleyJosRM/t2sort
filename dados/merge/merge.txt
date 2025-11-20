@@ -1,0 +1,60 @@
+Resultados ordenado
+
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000012 segundos
+Comparacoes:       356
+Trocas/Movim.:     0
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000075 segundos
+Comparacoes:       5044
+Trocas/Movim.:     0
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.001061 segundos
+Comparacoes:       69008
+Trocas/Movim.:     0
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.006515 segundos
+Comparacoes:       853904
+Trocas/Movim.:     0
+--------------------------------------------
+
+resultados inverso
+
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000011 segundos
+Comparacoes:       316
+Trocas/Movim.:     0
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000067 segundos
+Comparacoes:       4932
+Trocas/Movim.:     0
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000540 segundos
+Comparacoes:       64608
+Trocas/Movim.:     0
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.006202 segundos
+Comparacoes:       815024
+Trocas/Movim.:     0
+--------------------------------------------
+

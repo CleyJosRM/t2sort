@@ -1,0 +1,30 @@
+Resultados aleatorio
+
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000014 segundos
+Comparacoes:       733
+Trocas/Movim.:     403
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000081 segundos
+Comparacoes:       11428
+Trocas/Movim.:     6370
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000896 segundos
+Comparacoes:       149569
+Trocas/Movim.:     80847
+--------------------------------------------
+
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.012232 segundos
+Comparacoes:       1929257
+Trocas/Movim.:     1025446
+--------------------------------------------
+
