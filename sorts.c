@@ -218,7 +218,7 @@ void countingSort(int v[], int size){
             maior = v[i];
         }
     }
-    int aux[maior+1] = {}; //inicia com 0
+    int aux[+1] = {}; //inicia com 0
 
     //Conta as aparições dos elementos
     for(int i = 0; i < size; i++){
@@ -241,37 +241,4 @@ void countingSort(int v[], int size){
             aux[i]--;
         }
     }
-}
-
-int main(){
-
-    int n, sel;
-
-    scanf("%d", &n);
-    scanf("%d", &sel);
-
-    int* arr = (int*)malloc(n * sizeof(int));
-
-    switch(sel){
-        case 1: 
-        for(int i = 0; i < n; i++){
-            arr[i] = n - i;
-        }
-        break;
-
-        case 2:
-        for(int i = 0; i < n; i++){
-            arr[i] = i + 1;
-        }
-        break;
-
-        case 3:
-        int seed = 12345; //Não altere esse valor.
-        for(int i = 0; i < n; i++){
-            arr[i] = get_random(&seed, n);
-        }
-        break;
-    }
-
-    return 0;
 }
