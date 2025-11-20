@@ -92,7 +92,7 @@ int main(){
             break;
 
         case 9:
-            //raidix_sort(arr, n, counts);
+            radix_sort(arr, n, counts);
             break;
             
         default:

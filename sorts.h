@@ -1,6 +1,8 @@
 #ifndef SORTS_H
     #define SORTS_H
     #include <stdlib.h>
+    #include <string.h>
+    #include <stdio.h>
 
     void bubble_sort(int* array, int n, int* counts);
     void selection_sort(int* array, int n, int* counts);
@@ -10,4 +12,5 @@
     void heap_sort(int* array, int size, int* counts);
     void mergeSort(int v[], int inicio, int fim, int *counts);
     void countingSort(int v[], int size, int *counts);
+    void radix_sort(int v[], int n, int *counts);
 #endif

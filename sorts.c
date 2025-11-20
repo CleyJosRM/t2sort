@@ -1,4 +1,4 @@
-#include <string.h>
+#include "sorts.h"
 
 void swap(int* a, int* b) {
     int temp = *a;
@@ -92,7 +92,7 @@ void shellSort(int* arr, int n, int* counts){
     }
 }
 
-/*---------------quick-------------------*/
+/*---------------quick sort-------------------*/
 int pivotMediana(int* array, int left, int right, int* counts){
 
     int mid = left + (right - left) / 2;
@@ -142,7 +142,7 @@ void quick_sort(int* array, int left, int right, int* counts){
     }
 }
 
-/*---------------heap--------------------*/
+/*---------------heap sort--------------------*/
 void heapify(int* array, int k, int size, int* counts){
     int l = 2*k + 1;
     int r = 2*k + 2;
@@ -181,7 +181,7 @@ void heap_sort(int* array, int size, int* counts){
     }
 }
 
-/*---------------merge--------------------*/
+/*---------------merge sort--------------------*/
 void merge(int v[], int esq, int meio, int dir, int *counts){
     int n1 = meio - esq + 1;
     int n2 = dir - meio;
@@ -232,8 +232,7 @@ void mergeSort(int v[], int inicio, int fim, int* counts){
     }
 }
 
-
-/*---------------Counting--------------------*/
+/*---------------Counting sort--------------------*/
 int Maior(int v[], int size, int *counts){
     int maior = v[0];
     for(int i = 0; i < size; i++){
@@ -271,3 +270,65 @@ void countingSort(int v[], int size, int *counts){
         }
     }
 }
+
+/*---------------Radix sort--------------------*/
+typedef struct{
+    int *lista;
+    int tamanho;
+} Bucket;
+
+Bucket *Bucket_criar(int n){
+    Bucket *buckets = (Bucket *) malloc(10* sizeof(Bucket));
+    if(!buckets){
+        printf("Erro ao alocar lista de Buckets!");
+        exit(1);
+    }
+    for(int i = 0; i < 10; i++){
+        buckets[i].lista = (int *) calloc(n, sizeof(int));
+        if(!buckets[i].lista){
+            printf("Erro ao alocar lista nos Buckets!");
+            exit(1);
+        }
+        buckets[i].tamanho = 0;
+    }
+    return buckets;
+}
+
+void Bucket_excluir(Bucket *buckets){
+    for(int i = 0; i< 10; i++){
+        free(buckets[i].lista);
+    }
+    free(buckets);
+}
+
+void radix_sort(int v[], int n, int *counts){
+    int k = Maior(v, n, counts); //pega o maior elemento
+
+    Bucket *buckets = Bucket_criar(n);
+
+    for(int base = 1; k/base > 0; base *= 10){
+        //Pegando apenas ordens (unidade, dezena, centena...)
+        //Recolhendo os números nos buckets correspondentes
+        for(int i = 0; i < n; i++){
+            int digito = (v[i]/base) % 10;
+            int tam = buckets[digito].tamanho; //Auxiliar para evitar expressões muito longas
+            buckets[digito].lista[tam] = v[i];
+            buckets[digito].tamanho++;
+        }
+
+        int index = 0;
+        for(int i = 0; i < 10; i ++){
+            //Percorre os buckets e insere no vetor
+            for(int j = 0; j < buckets[i].tamanho; j++){
+                v[index] = buckets[i].lista[j];
+                index++;
+            }
+            buckets[i].tamanho = 0;
+        }
+    }
+
+    Bucket_excluir(buckets); //Libera os buckets auxiliares
+}
+
+
+
