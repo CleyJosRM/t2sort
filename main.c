@@ -24,7 +24,7 @@ int main(){
     printf("Selecione o tipo de vetor:\n 1. Vetor ordenado \n 2. Vetor ordenado inverso\n 3. Vetor aleatório\n");
     scanf("%d", &sel);
 
-    printf("Selecione o algoritmo:\n 1. Bubble Sort\n 2. Selection Sort\n 3. Insertion Sort\n 4. Shell Sort\n 5. Quick Sort\n 6. Heap Sort\n 7. Merge sort\n 8. Counting Sort\n 9. Radix sort\n");
+    printf("Selecione o algoritmo:\n 1. Bubble Sort\n 2. Selection Sort\n 3. Insertion Sort\n 4. Shell Sort\n 5. Quick Sort\n 6. Heap Sort\n 7. Merge sort\n 8. Contagem de Menores\n 9. Radix sort\n");
     scanf("%d", &sort);
 
     int* arr = (int*)malloc(n * sizeof(int));
@@ -88,7 +88,7 @@ int main(){
             break;
 
         case 8:
-            countingSort(arr, n, counts);
+            ContagemMenores(arr, n, counts);
             break;
 
         case 9:

@@ -186,8 +186,8 @@ void merge(int v[], int esq, int meio, int dir, int *counts){
     int n1 = meio - esq + 1;
     int n2 = dir - meio;
 
-    int auxEsq[n1];
-    int auxDir[n2];
+    int *auxEsq = (int *) malloc(n1 * sizeof(int));
+    int *auxDir = (int *) malloc(n2 * sizeof(int));
 
     //Copia os valores para os vetores auxiliares
     memcpy(auxEsq, &v[esq], n1 * sizeof(int));
@@ -220,6 +220,8 @@ void merge(int v[], int esq, int meio, int dir, int *counts){
         j++;
         k++;
     }
+    free(auxEsq);
+    free(auxDir);
 }
 
 void mergeSort(int v[], int inicio, int fim, int* counts){
@@ -235,7 +237,7 @@ void mergeSort(int v[], int inicio, int fim, int* counts){
 /*---------------Counting sort--------------------*/
 int Maior(int v[], int size, int *counts){
     int maior = v[0];
-    for(int i = 0; i < size; i++){
+    for(int i = 1; i < size; i++){
         if(v[i] > maior){
             maior = v[i];
         }
@@ -243,32 +245,36 @@ int Maior(int v[], int size, int *counts){
     }
     return maior;
 }
-void countingSort(int v[], int size, int *counts){ 
+void ContagemMenores(int v[], int size, int *counts){ 
     int maior = Maior(v, size, counts);
-    int aux[maior + 1];
-    memset(aux, 0, sizeof(aux)); //Inicia com 0
-
+    int *aux = (int *) calloc((maior + 1), sizeof(int));
+    int *out = (int *) malloc(size * sizeof(int));
+    if(!aux || !out){
+        printf("Contagem de Menores: Erro ao alocar vetor!");
+        exit(1);
+    }
     //Conta as aparições dos elementos
     for(int i = 0; i < size; i++){
-        int index = v[i];
-        //Se já existir um valor no indice
-        if(aux[index]){
-            aux[index] += 1;
-        }
-        else{
-            aux[index] = 1;
-        }
+        aux[v[i]]++;
     }
+    //Guardamos quantos elementos são menores que v[i]
+    for(int i = 1; i <= maior; i++){
+        aux[i] += aux[i -1];
+    }
+    for(int i = size -1; i >= 0; i--){
+        int elemento = v[i];
+        int index = aux[elemento] -1 ;
 
-    //Ordena o vetor
-    int j = 0;
-    for(int i = 0; i < maior+1; i++){
-        while(aux[i] > 0){
-            v[j] = i;
-            j++;
-            aux[i]--;
-        }
+        out[index] = elemento;
+        
+        aux[elemento]--;
     }
+    for(int i = 0; i < size; i++){
+        v[i] = out[i];
+        printf("%d,", v[i]);
+    }
+    free(aux);
+    free(out);
 }
 
 /*---------------Radix sort--------------------*/
