@@ -34,6 +34,28 @@ void selection_sort(int* array, int n, int* counts){
     }
 }
 
+/*-------------insertion sort--------------*/
+void insertion_sort(int* array, int n, int* counts){
+    for(int i = 1; i < n; i++){
+        int key = array[i]; 
+        int j = i - 1;
+
+        while(j >= 0){
+            counts[0]++;
+
+            if(array[j] > key){
+                array[j + 1] = array[j];
+                counts[1]++;
+                j--;
+            }else{
+                break;
+            }
+        }
+        array[j + 1] = key;
+        counts[1]++;
+    }
+}
+
 /*-------------shell sort--------------*/
 void shellSort(int* arr, int n, int* counts){
     
@@ -218,7 +240,8 @@ void countingSort(int v[], int size){
             maior = v[i];
         }
     }
-    int aux[+1] = {}; //inicia com 0
+    int aux[maior + 1];
+    memset(aux, 0, sizeof(aux));
 
     //Conta as aparições dos elementos
     for(int i = 0; i < size; i++){
