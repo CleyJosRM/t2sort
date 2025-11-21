@@ -188,15 +188,17 @@ void merge(int v[], int esq, int meio, int dir, long long int *counts){
 
     int *auxEsq = (int *) malloc(n1 * sizeof(int));
     int *auxDir = (int *) malloc(n2 * sizeof(int));
-
+    
     //Copia os valores para os vetores auxiliares
     memcpy(auxEsq, &v[esq], n1 * sizeof(int));
     memcpy(auxDir, &v[meio + 1], n2 * sizeof(int));
+    counts[1] += (n1 + n2); //Considera o tamanho do vetor
 
     int i = 0, j = 0, k = esq;
 
     //Entre os vetores, ordena selecionando o maior
     while(i < n1 && j < n2){
+        counts[0] += 1;
         if(auxEsq[i] <= auxDir[j]){
             v[k] = auxEsq[i];
             i++;
@@ -205,18 +207,20 @@ void merge(int v[], int esq, int meio, int dir, long long int *counts){
             v[k] = auxDir[j];
             j++;
         }
-        counts[0] += 1;
+        counts[1] += 1;
         k++;
     }
 
     //Garantimos que percorremos todos os indices
     while(i < n1){
         v[k] = auxEsq[i];
+        counts[1] += 1;
         i++;
         k++;
     }
     while(j < n2){
         v[k] = auxDir[j];
+        counts[1] += 1;
         j++;
         k++;
     }
@@ -234,7 +238,7 @@ void mergeSort(int v[], int inicio, int fim, long long int* counts){
     }
 }
 
-/*---------------Counting sort--------------------*/
+/*---------------Contagem de Menores--------------------*/
 int Maior(int v[], int size, long long int *counts){
     int maior = v[0];
     for(int i = 1; i < size; i++){
@@ -266,12 +270,13 @@ void ContagemMenores(int v[], int size, long long int *counts){
         int index = aux[elemento] -1 ;
 
         out[index] = elemento;
-        
+        counts[1] += 1;
         aux[elemento]--;
     }
     for(int i = 0; i < size; i++){
         v[i] = out[i];
     }
+    counts[1] += size;
     free(aux);
     free(out);
 }
@@ -319,6 +324,7 @@ void radix_sort(int v[], int n, long long int *counts){
             int tam = buckets[digito].tamanho; //Auxiliar para evitar expressões muito longas
             buckets[digito].lista[tam] = v[i];
             buckets[digito].tamanho++;
+            counts[1] += 1;
         }
 
         int index = 0;
@@ -326,7 +332,7 @@ void radix_sort(int v[], int n, long long int *counts){
             //Percorre os buckets e insere no vetor
             for(int j = 0; j < buckets[i].tamanho; j++){
                 v[index] = buckets[i].lista[j];
-                
+                counts[1] += 1;
                 index++;
             }
             buckets[i].tamanho = 0;

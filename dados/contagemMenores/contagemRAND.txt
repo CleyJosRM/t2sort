@@ -1,0 +1,167 @@
+Resultados Aleatório
+
+S: 12345--------
+N: 100
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000004 segundos
+Comparacoes:       99
+Trocas/Movim.:     200
+--------------------------------------------
+
+N: 1000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000017 segundos
+Comparacoes:       999
+Trocas/Movim.:     2000
+--------------------------------------------
+
+N: 10000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000160 segundos
+Comparacoes:       9999
+Trocas/Movim.:     20000
+--------------------------------------------
+
+N: 100000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.002069 segundos
+Comparacoes:       99999
+Trocas/Movim.:     200000
+--------------------------------------------
+
+S: 20389--------
+N: 100
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000003 segundos
+Comparacoes:       99
+Trocas/Movim.:     200
+--------------------------------------------
+
+N: 1000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000017 segundos
+Comparacoes:       999
+Trocas/Movim.:     2000
+--------------------------------------------
+
+N: 10000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000166 segundos
+Comparacoes:       9999
+Trocas/Movim.:     20000
+--------------------------------------------
+
+N: 100000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.002062 segundos
+Comparacoes:       99999
+Trocas/Movim.:     200000
+--------------------------------------------
+
+S: 98603--------
+N: 100
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000003 segundos
+Comparacoes:       99
+Trocas/Movim.:     200
+--------------------------------------------
+
+N: 1000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000017 segundos
+Comparacoes:       999
+Trocas/Movim.:     2000
+--------------------------------------------
+
+N: 10000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000162 segundos
+Comparacoes:       9999
+Trocas/Movim.:     20000
+--------------------------------------------
+
+N: 100000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.002114 segundos
+Comparacoes:       99999
+Trocas/Movim.:     200000
+--------------------------------------------
+
+S: 66526--------
+N: 100
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000003 segundos
+Comparacoes:       99
+Trocas/Movim.:     200
+--------------------------------------------
+
+N: 1000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000017 segundos
+Comparacoes:       999
+Trocas/Movim.:     2000
+--------------------------------------------
+
+N: 10000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000150 segundos
+Comparacoes:       9999
+Trocas/Movim.:     20000
+--------------------------------------------
+
+N: 100000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.002039 segundos
+Comparacoes:       99999
+Trocas/Movim.:     200000
+--------------------------------------------
+
+S: 38438--------
+N: 100
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000003 segundos
+Comparacoes:       99
+Trocas/Movim.:     200
+--------------------------------------------
+
+N: 1000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000017 segundos
+Comparacoes:       999
+Trocas/Movim.:     2000
+--------------------------------------------
+
+N: 10000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.000157 segundos
+Comparacoes:       9999
+Trocas/Movim.:     20000
+--------------------------------------------
+
+N: 100000
+
+---------------- RESULTADOS ----------------
+Tempo de execucao: 0.002054 segundos
+Comparacoes:       99999
+Trocas/Movim.:     200000
+--------------------------------------------
+

@@ -50,7 +50,7 @@ int main(){
         break;
 
         case 3:
-        int seed = 12345; //Não altere esse valor.
+        int seed = 12345;
         for(int i = 0; i < n; i++){
             arr[i] = get_random(&seed, n);
         }

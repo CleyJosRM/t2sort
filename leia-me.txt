@@ -1,0 +1,9 @@
+Alunos: Cleyton José Rodrigues Macedo 16821725
+        Kauã Benjamin Trombim Silva 16830893
+
+Para Testar o código, basta digitar no terminal "make all" no terminal para compilar e "make run" para executar.
+O código pede 3 entradas (que são solicidadas no terminal) e são elas:
+- O tamanho do vetor, um int
+- O tipo de vetor, ordenado, inverso ou aleatório
+- O método de ordenação desejado
+Ao passar por essa etapa o código exibe o tempo de execução do programa, junto aos números de comparações e manipulações de chaves realizadas.

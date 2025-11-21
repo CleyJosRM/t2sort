@@ -3,58 +3,58 @@ Resultados Aleatório
 Ordenados
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.000009 segundos
-Comparacoes:       356
-Trocas/Movim.:     1344
+Tempo de execucao: 0.000003 segundos
+Comparacoes:       99
+Trocas/Movim.:     200
 --------------------------------------------
 
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.000092 segundos
-Comparacoes:       5044
-Trocas/Movim.:     19952
+Tempo de execucao: 0.000017 segundos
+Comparacoes:       999
+Trocas/Movim.:     2000
 --------------------------------------------
 
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.000853 segundos
-Comparacoes:       69008
-Trocas/Movim.:     267232
+Tempo de execucao: 0.000152 segundos
+Comparacoes:       9999
+Trocas/Movim.:     20000
 --------------------------------------------
 
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.010510 segundos
-Comparacoes:       853904
-Trocas/Movim.:     3337856
+Tempo de execucao: 0.001805 segundos
+Comparacoes:       99999
+Trocas/Movim.:     200000
 --------------------------------------------
 
 Inversos
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.000009 segundos
-Comparacoes:       316
-Trocas/Movim.:     1344
+Tempo de execucao: 0.000003 segundos
+Comparacoes:       99
+Trocas/Movim.:     200
 --------------------------------------------
 
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.000080 segundos
-Comparacoes:       4932
-Trocas/Movim.:     19952
+Tempo de execucao: 0.000017 segundos
+Comparacoes:       999
+Trocas/Movim.:     2000
 --------------------------------------------
 
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.000928 segundos
-Comparacoes:       64608
-Trocas/Movim.:     267232
+Tempo de execucao: 0.000156 segundos
+Comparacoes:       9999
+Trocas/Movim.:     20000
 --------------------------------------------
 
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.010206 segundos
-Comparacoes:       815024
-Trocas/Movim.:     3337856
+Tempo de execucao: 0.001705 segundos
+Comparacoes:       99999
+Trocas/Movim.:     200000
 --------------------------------------------
 

@@ -1,5 +1,3 @@
-dev: clean all run
-
 all: main.o sorts.o
 	gcc main.o sorts.o -o main -std=c99 -Wall
 

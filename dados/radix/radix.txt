@@ -1,60 +1,186 @@
-Resultados ordenado
+Resultados Aleatório
 
+Ordenados
+Selecione o tamanho do vetor:
+Selecione o tipo de vetor:
+ 1. Vetor ordenado 
+ 2. Vetor ordenado inverso
+ 3. Vetor aleatório
+Selecione o algoritmo:
+ 1. Bubble Sort
+ 2. Selection Sort
+ 3. Insertion Sort
+ 4. Shell Sort
+ 5. Quick Sort
+ 6. Heap Sort
+ 7. Merge sort
+ 8. Contagem de Menores
+ 9. Radix sort
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.000014 segundos
-Comparacoes:       100
-Trocas/Movim.:     0
+Tempo de execucao: 0.000008 segundos
+Comparacoes:       99
+Trocas/Movim.:     600
 --------------------------------------------
 
+Ordenados
+Selecione o tamanho do vetor:
+Selecione o tipo de vetor:
+ 1. Vetor ordenado 
+ 2. Vetor ordenado inverso
+ 3. Vetor aleatório
+Selecione o algoritmo:
+ 1. Bubble Sort
+ 2. Selection Sort
+ 3. Insertion Sort
+ 4. Shell Sort
+ 5. Quick Sort
+ 6. Heap Sort
+ 7. Merge sort
+ 8. Contagem de Menores
+ 9. Radix sort
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.000099 segundos
-Comparacoes:       1000
-Trocas/Movim.:     0
+Tempo de execucao: 0.000068 segundos
+Comparacoes:       999
+Trocas/Movim.:     8000
 --------------------------------------------
 
+Ordenados
+Selecione o tamanho do vetor:
+Selecione o tipo de vetor:
+ 1. Vetor ordenado 
+ 2. Vetor ordenado inverso
+ 3. Vetor aleatório
+Selecione o algoritmo:
+ 1. Bubble Sort
+ 2. Selection Sort
+ 3. Insertion Sort
+ 4. Shell Sort
+ 5. Quick Sort
+ 6. Heap Sort
+ 7. Merge sort
+ 8. Contagem de Menores
+ 9. Radix sort
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.001189 segundos
-Comparacoes:       10000
-Trocas/Movim.:     0
+Tempo de execucao: 0.000812 segundos
+Comparacoes:       9999
+Trocas/Movim.:     100000
 --------------------------------------------
 
+Ordenados
+Selecione o tamanho do vetor:
+Selecione o tipo de vetor:
+ 1. Vetor ordenado 
+ 2. Vetor ordenado inverso
+ 3. Vetor aleatório
+Selecione o algoritmo:
+ 1. Bubble Sort
+ 2. Selection Sort
+ 3. Insertion Sort
+ 4. Shell Sort
+ 5. Quick Sort
+ 6. Heap Sort
+ 7. Merge sort
+ 8. Contagem de Menores
+ 9. Radix sort
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.007001 segundos
-Comparacoes:       100000
-Trocas/Movim.:     0
+Tempo de execucao: 0.007996 segundos
+Comparacoes:       99999
+Trocas/Movim.:     1200000
 --------------------------------------------
 
-resultados inverso
-
+Inversos
+Selecione o tamanho do vetor:
+Selecione o tipo de vetor:
+ 1. Vetor ordenado 
+ 2. Vetor ordenado inverso
+ 3. Vetor aleatório
+Selecione o algoritmo:
+ 1. Bubble Sort
+ 2. Selection Sort
+ 3. Insertion Sort
+ 4. Shell Sort
+ 5. Quick Sort
+ 6. Heap Sort
+ 7. Merge sort
+ 8. Contagem de Menores
+ 9. Radix sort
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.000007 segundos
-Comparacoes:       100
-Trocas/Movim.:     0
+Tempo de execucao: 0.000008 segundos
+Comparacoes:       99
+Trocas/Movim.:     600
 --------------------------------------------
 
+Inversos
+Selecione o tamanho do vetor:
+Selecione o tipo de vetor:
+ 1. Vetor ordenado 
+ 2. Vetor ordenado inverso
+ 3. Vetor aleatório
+Selecione o algoritmo:
+ 1. Bubble Sort
+ 2. Selection Sort
+ 3. Insertion Sort
+ 4. Shell Sort
+ 5. Quick Sort
+ 6. Heap Sort
+ 7. Merge sort
+ 8. Contagem de Menores
+ 9. Radix sort
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.000055 segundos
-Comparacoes:       1000
-Trocas/Movim.:     0
+Tempo de execucao: 0.000091 segundos
+Comparacoes:       999
+Trocas/Movim.:     8000
 --------------------------------------------
 
+Inversos
+Selecione o tamanho do vetor:
+Selecione o tipo de vetor:
+ 1. Vetor ordenado 
+ 2. Vetor ordenado inverso
+ 3. Vetor aleatório
+Selecione o algoritmo:
+ 1. Bubble Sort
+ 2. Selection Sort
+ 3. Insertion Sort
+ 4. Shell Sort
+ 5. Quick Sort
+ 6. Heap Sort
+ 7. Merge sort
+ 8. Contagem de Menores
+ 9. Radix sort
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.000643 segundos
-Comparacoes:       10000
-Trocas/Movim.:     0
+Tempo de execucao: 0.000826 segundos
+Comparacoes:       9999
+Trocas/Movim.:     100000
 --------------------------------------------
 
+Inversos
+Selecione o tamanho do vetor:
+Selecione o tipo de vetor:
+ 1. Vetor ordenado 
+ 2. Vetor ordenado inverso
+ 3. Vetor aleatório
+Selecione o algoritmo:
+ 1. Bubble Sort
+ 2. Selection Sort
+ 3. Insertion Sort
+ 4. Shell Sort
+ 5. Quick Sort
+ 6. Heap Sort
+ 7. Merge sort
+ 8. Contagem de Menores
+ 9. Radix sort
 
 ---------------- RESULTADOS ----------------
-Tempo de execucao: 0.007627 segundos
-Comparacoes:       100000
-Trocas/Movim.:     0
+Tempo de execucao: 0.008140 segundos
+Comparacoes:       99999
+Trocas/Movim.:     1200000
 --------------------------------------------
 
